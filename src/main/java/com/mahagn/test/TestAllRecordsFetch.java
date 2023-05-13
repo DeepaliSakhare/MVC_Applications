@@ -7,10 +7,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.sql.SQLException;
 
 public class TestAllRecordsFetch {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         ApplicationContext context =new ClassPathXmlApplicationContext("application-context.xml");
         StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
-        studentDao.getStudentRecords();
+        studentDao.getStudentRecords();//getallrecords
         System.out.println(studentDao);//src/main/resources/application-context.xml
     }
 
